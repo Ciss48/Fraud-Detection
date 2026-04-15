@@ -1,0 +1,26 @@
+,condition,support_%,fraud_rate_%,lift_x,n_fraud_txn,fraud_recall_%,action
+0,amt>$500 AND category=shopping_net AND night(22-6),0.16,63.704,122.3,1885,19.53,BLOCK — high confidence fraud
+1,amt>$500 AND category=misc_net AND night(22-6),0.104,52.792,101.3,1021,10.58,BLOCK — high confidence fraud
+2,age>55 AND amt>$500 AND night(22-6),0.173,46.101,88.5,1478,15.31,HOLD for manual review
+3,amt>$500 AND night(22-6),0.466,46.032,88.4,3973,41.17,HOLD for manual review
+4,age 30-55 AND amt>$500 AND night(22-6),0.223,42.338,81.3,1749,18.12,HOLD for manual review
+5,amt>$500 AND category=misc_net,0.173,36.972,71.0,1182,12.25,HOLD for manual review
+6,amt>$500 AND category=shopping_net,0.332,36.087,69.3,2219,22.99,HOLD for manual review
+7,age>55 AND amt>$500,0.296,32.646,62.7,1790,18.55,HOLD for manual review
+8,age 30-55 AND amt>$500 AND category=shopping_net,0.174,29.455,56.5,952,9.86,HOLD for manual review
+9,amt $200-500 AND category=grocery_pos AND night(22-6),0.486,22.053,42.3,1985,20.57,HOLD for manual review
+10,amt>$500,1.172,21.576,41.4,4684,48.53,HOLD for manual review
+11,amt>$500 AND category=shopping_pos,0.322,17.727,34.0,1056,10.94,FLAG — escalate to analyst
+12,age 30-55 AND amt>$500,0.673,16.215,31.1,2022,20.95,FLAG — escalate to analyst
+13,amt $200-500 AND category=grocery_pos,0.878,13.697,26.3,2228,23.09,FLAG — escalate to analyst
+14,amt $200-500 AND night(22-6),1.208,10.408,20.0,2329,24.13,FLAG — escalate to analyst
+15,age 30-55 AND amt $200-500 AND night(22-6),0.724,7.883,15.1,1057,10.95,FLAG — escalate to analyst
+16,age>55 AND amt $200-500,0.718,7.305,14.0,972,10.07,FLAG — escalate to analyst
+17,category=shopping_net AND night(22-6),2.401,4.239,8.1,1885,19.53,MONITOR — log and watch
+18,amt $200-500,3.54,4.012,7.7,2631,27.26,MONITOR — log and watch
+19,age 30-55 AND amt $200-500,2.153,2.986,5.7,1191,12.34,MONITOR — log and watch
+20,category=misc_net AND night(22-6),2.182,2.527,4.8,1021,10.58,MONITOR — log and watch
+21,category=grocery_pos AND night(22-6),4.745,2.258,4.3,1985,20.57,MONITOR — log and watch
+22,age<30 AND night(22-6),4.725,1.749,3.4,1531,15.86,MONITOR — log and watch
+23,category=shopping_net,7.521,1.593,3.1,2219,22.99,MONITOR — log and watch
+24,age>55 AND night(22-6),9.773,1.623,3.1,2938,30.44,MONITOR — log and watch

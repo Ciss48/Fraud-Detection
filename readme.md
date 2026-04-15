@@ -1,5 +1,7 @@
-# Fraud Pattern Mining — Project Guide for Claude Code
+# Fraud Pattern Mining 
+you can get both train and test data at: https://www.kaggle.com/datasets/kartik2112/fraud-detection/data
 
+Vì video lộ trình mới dừng ở Phần 2 nên project này t đang push lên đến phase 2 thôi nha, bao giờ có video lộ trình Phần 3 thì push nốt phase3 là xây dựng mô hình
 ## Project Overview
 
 **Goal:** Khai thác các fraud pattern có thể giải thích được từ tập giao dịch thẻ tín dụng, sử dụng Association Rule Mining kết hợp với Anomaly Detection. Đây **không phải** bài toán dự đoán thuần túy — mục tiêu chính là khám phá ra các quy luật/pattern mô tả điều kiện nào khiến một giao dịch có khả năng là fraud cao, đủ để một fraud analyst đọc và hành động được.
@@ -207,14 +209,3 @@ Anomaly Detection/
 | Confidence | P(fraud | antecedent conditions) |
 | Lift | Fraud likelihood khi có rule conditions, so với base fraud rate. Lift > 1 = tốt |
 | AUC-PR | Area under Precision-Recall curve, phù hợp hơn AUC-ROC cho imbalanced data |
-
----
-
-## Notes for Claude Code
-
-- Luôn kiểm tra shape và dtypes trước khi xử lý
-- Tất cả notebooks phải reproducible (set random seed)
-- Khi chạy FP-Growth trên 1.85M rows, cân nhắc sample stratified trước để test nhanh, sau đó mới chạy full
-- Các hàm tái sử dụng (preprocessing, evaluation) nên được extract vào `src/`
-- Mỗi phase output ra file riêng trong `outputs/` để có thể review độc lập
-- Fraud rate rất thấp (~0.5%) — cẩn thận với accuracy paradox khi đánh giá model
