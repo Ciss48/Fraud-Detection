@@ -1,5 +1,6 @@
 # Fraud Pattern Mining 
 ## Project Overview
+Download dataset at: https://www.kaggle.com/datasets/kartik2112/fraud-detection/data
 
 **Goal:** Khai thác các fraud pattern có thể giải thích được từ tập giao dịch thẻ tín dụng, sử dụng Association Rule Mining kết hợp với Anomaly Detection. Đây **không phải** bài toán dự đoán thuần túy — mục tiêu chính là khám phá ra các quy luật/pattern mô tả điều kiện nào khiến một giao dịch có khả năng là fraud cao, đủ để một fraud analyst đọc và hành động được.
 
